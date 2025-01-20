@@ -1,0 +1,12 @@
+CRITICAL - 2025-01-11 03:16:41 --> ErrorException: Undefined variable $currentPage
+in APPPATH\Views\trefle\index.php on line 35.
+ 1 APPPATH\Views\trefle\index.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentPage', 'C:\\KULIAH\\SEMESTER 5\\Garden\\garden\\app\\Views\\trefle\\index.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\KULIAH\\SEMESTER 5\\Garden\\garden\\app\\Views\\trefle\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('trefle/index', [], true)
+ 5 APPPATH\Controllers\TrefleController.php(28): view('trefle/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TrefleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TrefleController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\KULIAH\\SEMESTER 5\\Garden\\garden\\public\\index.php')

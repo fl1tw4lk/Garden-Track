@@ -1,0 +1,27 @@
+CRITICAL - 2025-01-12 09:26:25 --> CodeIgniter\HTTP\Exceptions\HTTPException: 6 : Could not resolve host: trefle.io
+in SYSTEMPATH/HTTP/CURLRequest.php on line 695.
+ 1 SYSTEMPATH/HTTP/CURLRequest.php(695): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError()
+ 2 SYSTEMPATH/HTTP/CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest()
+ 3 SYSTEMPATH/HTTP/CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send()
+ 4 SYSTEMPATH/HTTP/CURLRequest.php(180): CodeIgniter\HTTP\CURLRequest->request()
+ 5 APPPATH/Controllers/TrefleController.php(20): CodeIgniter\HTTP\CURLRequest->get()
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TrefleController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/garden/public/index.php')
+CRITICAL - 2025-01-12 14:56:17 --> ErrorException: Cannot redeclare App\Controllers\Home::index()
+in APPPATH/Controllers/Home.php on line 15.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-12 16:02:33 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 401
+in SYSTEMPATH/HTTP/CURLRequest.php on line 695.
+ 1 SYSTEMPATH/HTTP/CURLRequest.php(695): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError()
+ 2 SYSTEMPATH/HTTP/CURLRequest.php(387): CodeIgniter\HTTP\CURLRequest->sendRequest()
+ 3 SYSTEMPATH/HTTP/CURLRequest.php(145): CodeIgniter\HTTP\CURLRequest->send()
+ 4 SYSTEMPATH/HTTP/CURLRequest.php(180): CodeIgniter\HTTP\CURLRequest->request()
+ 5 APPPATH/Controllers/Plants.php(21): CodeIgniter\HTTP\CURLRequest->get()
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\Plants->index()
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/garden/public/index.php')

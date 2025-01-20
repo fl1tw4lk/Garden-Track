@@ -1,0 +1,1094 @@
+CRITICAL - 2025-01-17 17:47:10 --> ErrorException: Undefined variable $link
+in APPPATH\Views\login_page.php on line 179.
+ 1 APPPATH\Views\login_page.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $link', 'C:\\xampp\\htdocs\\garden-CI\\app\\Views\\login_page.php', 179)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\garden-CI\\app\\Views\\login_page.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login_page', [], true)
+ 5 APPPATH\Controllers\login_controller.php(25): view('login_page')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:00:21 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\login_controller.php on line 31.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\garden-CI\\app\\Controllers\\Login_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Login_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Login_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Login_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:08:02 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(29): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrsTQ-Q8vUlXzoeF4pcwsC9jxnulWN8cAthkd_k2r8O1dxaJSUmTWVPGZ0tALmYyyA')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:08:08 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:08:21 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:08:35 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:09:28 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:12:45 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:21:38 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(29): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRruEVLy4BrfsUd0EZPeVT8KbYIEVhWv3jIpR9fXQgzaJOhLnYiTrLD9VM5AUagM6eA')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:21:50 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:22:07 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(32): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:29:59 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrvC6oh0Rpi_6uuZoIF3yRadfQBVkFh1NGolVQ1Z_YP2TvgVVU-4lU7RR3jOzoxkBA')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:30:17 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 18:30:47 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:32:59 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrtm-jzUeM1xAFBRxBTo8lZ4bZVrq-Uk5FR5r-x9gZJZYKokWlz96chbNKmMEiMZrA')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:33:40 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:34:06 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRruGwCi7gMnH853TvPNsnUPgfje5Rx0eLychafTOfd9lMiMEu6F_wgUlcTcZENEuVw')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:34:11 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+ERROR - 2025-01-17 18:34:11 --> mysqli_sql_exception: Unknown column 'nama_user' in 'field list' in C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->update('103570991852395...', Array)
+#8 C:\xampp\htdocs\garden-CI\app\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+#10 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+#11 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\garden-CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-01-17 18:34:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 6 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:34:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:34:11\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:34:11\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 8 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:34:11 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:34:11\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:34:11\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:34:11\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 9 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:35:20 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+ERROR - 2025-01-17 18:35:20 --> mysqli_sql_exception: Unknown column 'nama_user' in 'field list' in C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->update('103570991852395...', Array)
+#8 C:\xampp\htdocs\garden-CI\app\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+#10 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+#11 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\garden-CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\garden-CI\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-01-17 18:35:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 6 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:35:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:35:20\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:35:20\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 8 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:35:20 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_user' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:35:20\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:35:20\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `id_user` = \'103570991852395609259\', `nama_user` = \'Natha Widya\', `email` = \'nathawidya7@gmail.com\', `profile` = \'https://lh3.googleusercontent.com/a/ACg8ocID0FqH9Nv3CFU6daa3wLlkLg_G6ItWK2x9uRliDrGZg9N0duo=s96-c\', `updated_at` = \'2025-01-17 18:35:20\'
+WHERE `users`.`id_user` IN (\'103570991852395609259\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `id_user` = :id_user.1:, `nama_user` = :nama_user:, `email` = :email:, `profile` = :profile:, `updated_at` = :updated_at:
+WHERE `users`.`id_user` IN :users.id_user:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('103570991852395609259', [...])
+ 9 APPPATH\Controllers\login_controller.php(44): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:37:08 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRru-Hv4Hc1zYu4ZnI4rJQW-ZSMFVD62S9UwkgCYc-OfFPD2Bprw5ZD3xi-YtZefhQg')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:37:15 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:40:46 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrvWwtCKlhpn4Xw_gy4EhxENnklWNfaRvJHFAvBcCxtdhMRIQI4Aj5O8kI0Jtbaz3Q')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:40:56 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:40:56 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\User_Page.php(717): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\garden-CI\\app\\Views\\User_Page.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 5 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:41:35 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrsorTiq_p0Dig6-H7Tvu7v0-K69wrFSBdLfMPM5UMbqjT2EatN8mMBttseFULJnWg')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:46:31 --> [DEPRECATED] strlen(): Passing null to parameter #1 ($string) of type string is deprecated in VENDORPATH\google\apiclient\src\Google\Client.php on line 206.
+ 1 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:46:31 --> InvalidArgumentException: Invalid code
+in VENDORPATH\google\apiclient\src\Google\Client.php on line 207.
+ 1 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:47:45 --> [DEPRECATED] strlen(): Passing null to parameter #1 ($string) of type string is deprecated in VENDORPATH\google\apiclient\src\Google\Client.php on line 206.
+ 1 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 18:47:45 --> InvalidArgumentException: Invalid code
+in VENDORPATH\google\apiclient\src\Google\Client.php on line 207.
+ 1 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:47:56 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:47:56 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\User_Page.php(717): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\garden-CI\\app\\Views\\User_Page.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 5 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:53:08 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:53:09 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\user_page.php(717): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\garden-CI\\app\\Views\\user_page.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 5 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 18:53:16 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 18:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 18:53:17 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\user_page.php(717): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\garden-CI\\app\\Views\\user_page.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 5 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 19:00:21 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrtk2kr7dWbDiHbuYlGs6ZGvTm4xnf8BGxSUzUED27wUnUGa_6_gJsucsXnXHB_O6w')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:00:28 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:00:28 --> Error: Undefined constant "login_controller"
+in APPPATH\Views\user_page.php on line 3.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 4 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 19:00:37 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrv-A8qobMId67MTFsE7uF_vbD6oGhC3gAX2sZ-Ebh83pN3CVAW2Ngwj-IDksnaiew')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:00:42 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:00:42 --> Error: Undefined constant "login_controller"
+in APPPATH\Views\user_page.php on line 3.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 4 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:01:02 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:01:03 --> Error: Undefined constant "login"
+in APPPATH\Views\user_page.php on line 3.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('User_page.php', [], true)
+ 4 APPPATH\Controllers\login_controller.php(47): view('User_page.php')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 19:01:30 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login_controller.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrvW6wpkCQ805p7k9qKGUX95vs0oDzxfATXBOBZZf6xj6SGm-cJ1KfqdlnzRT2vvKQ')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:01:37 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:03:20 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:17:38 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:17:45 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login_controller.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login_controller->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:26:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login/index', [], true)
+ 3 APPPATH\Controllers\login.php(27): view('login/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-17 19:27:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\login.php(27): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:28:38 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:28:49 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrsEckLhKJJUTaiFrTgfCnfoVzud0OIINv9E8s2inExbtrvTaSlsR_5jiAyPvKs0Rw')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:28:58 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:29:22 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:30:23 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRruAq0fOoB-ToHvC9YyHTJ1XxVsoBdDH4_NEgLEySQ6KclZ_YaIVe1OmBcFcY_ubww')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:30:31 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:31:17 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrvlXwX8ueGpg3Cv2J4u0FyBSps_6Y7e6VHt4uB3LTjACXNo99JyeEJvCE_EwfaJCw')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:31:24 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:32:05 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:32:44 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:33:52 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:37:19 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrududpDzjVN7wJIA4szTJYxNRXUk5CGJ4glQRX_pL3GwiARJ54M22oSzCNFw2DiaA')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:37:35 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-17 19:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:38:41 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRruPlcDUgevz7XEYhpU6GKXVq1UfY4acXudty4gPsHXgegL5CZkuqEJSTyJgXZ-xug')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:38:48 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:39:01 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrtJrUbGfUuKvAvmF9uLgoYR1bU54987UCM5l09BPN59WV7vMwbHTvF98koswGADcg')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:39:07 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:39:15 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-17 19:39:44 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\login.php(31): Google_Client->fetchAccessTokenWithAuthCode('4/0AanRRrs7wLCtSEDID_24jpSWI13gxR4pmrc6vDkQqPbUVvOqnHmgyyGFMk29fvu1DHRb-Q')
+15 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+16 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+WARNING - 2025-01-17 19:39:53 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:40:06 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:42:49 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:44:35 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:50:38 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-01-17 19:50:56 --> [DEPRECATED] Creation of dynamic property Google\Service\Oauth2::$serviceName is deprecated in VENDORPATH\google\apiclient-services\src\Oauth2.php on line 67.
+ 1 APPPATH\Controllers\login.php(34): Google\Service\Oauth2->__construct(Object(Google_Client))
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login->proses()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-17 19:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

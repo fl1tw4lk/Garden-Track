@@ -1,0 +1,371 @@
+INFO - 2025-01-14 15:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 16:52:07 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:28 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:30 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:30 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:30 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:30 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:37 --> Error: Class "App\Models\Model_login" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:51 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:52 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:52 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:53:57 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:33 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:34 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:35 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:54:36 --> Error: Class "App\Models\Model_register" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:55:00 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:55:01 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:55:14 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:55:57 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:57 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:58 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:59 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:59 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:59 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:56:59 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:35 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:36 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:36 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:36 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:37 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:37 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:37 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:57:42 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 16:59:14 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+CRITICAL - 2025-01-14 17:01:40 --> Error: Class "App\Controllers\register_model" not found
+in APPPATH\Controllers\register_controller.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\garden-CI\\public\\index.php')
+INFO - 2025-01-14 17:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 17:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
