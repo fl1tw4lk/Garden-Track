@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         * {
             margin: 0;
@@ -155,13 +156,13 @@
         <div class="welcome-section">
             <h1>Hello, Welcome!</h1>
             <p>Don't have an account?</p>
-            <a href="register/index" class="register-btn">Register</a>
+            <a href="register" class="register-btn">Register</a>
         </div>
         <div class="login-section">
             <h2>Login</h2>
             <form action="<?= base_url('login/auth') ?>" method="POST">
                 <div class="form-group">
-                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="nama_users" placeholder="Username" required>
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-group">
@@ -181,5 +182,29 @@
             </div>
         </div>
     </div>
+    <!-- Script untuk menampilkan SweetAlert dari session flashdata -->
+    <script>
+        // Cek apakah ada session flashdata 
+        const successMessage = "<?= session()->getFlashdata('success') ?>";
+
+        if (successMessage) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+
+            Toast.fire({
+                icon: "success",
+                title: successMessage // Tampilkan pesan dari session flashdata
+            });
+        }
+    </script>
 </body>
 </html>

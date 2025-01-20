@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         * {
             margin: 0;
@@ -155,31 +156,49 @@
         <div class="welcome-section">
             <h1>Welcome Back!</h1>
             <p>Already have an account?</p>
-            <a href="login_page.php" class="login-btn">Login</a>
+            <a href="login" class="login-btn">Login</a>
         </div>
         <div class="register-section">
             <h2>Register</h2>
-            <form action="<?= base_url('register/create') ?>" method="POST">
-                <div class="form-group">
+            <form action="<?= base_url('register/auth') ?>" method="POST">
+                <!-- <div class="form-group">
                     <input type="text" name="fullname" placeholder="Full Name" required>
                     <i class="fas fa-user"></i>
+                </div> -->
+                <div class="form-group">
+                    <input type="text" name="nama_users" placeholder="Username" required>
+                    <i class="fas fa-user-circle"></i>
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Email Address" required>
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="form-group">
                     <input type="password" name="password" placeholder="Password" required>
                     <i class="fas fa-lock"></i>
                 </div>
+                <div class="form-group">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div style="color: red;">
+                        <?php 
+                        $errors = session()->getFlashdata('error'); 
+                        if (is_array($errors)) {
+                            foreach ($errors as $error) {
+                                echo "<p>$error</p>"; 
+                            }
+                        } else {
+                            echo "<p>$errors</p>";
+                        }
+                        ?>
+                    </div>
+                <?php endif; ?>
                 <div class="terms">
                     By registering, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
                 </div>
-                <button type="submit" class="register-btn">Create Account</button>
+                <button type="submit" class="register-btn" value="daftar" name='btn_register'>Create Account</button>
             </form>
             <div class="social-register">
                 <p>or register with social platforms</p>
@@ -189,5 +208,30 @@
             </div>
         </div>
     </div>
+    
+    <!-- Script untuk menampilkan SweetAlert dari session flashdata -->
+    <script>
+        // Cek apakah ada session flashdata 
+        const errorMessage = "<?= session()->getFlashdata('error1') ?>";
+
+        if (errorMessage) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+
+            Toast.fire({
+                icon: "success",
+                title: errorMessage // Tampilkan pesan dari session flashdata
+            });
+        }
+    </script>
 </body>
 </html>

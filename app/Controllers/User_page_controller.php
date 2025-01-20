@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class user_page_controller extends BaseController
+class User_page_controller extends BaseController
 {
     // public function index(): string
     // {

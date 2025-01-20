@@ -10,20 +10,20 @@ $routes->get('/services', 'Home::services');
 $routes->get('/plants', 'Plants::index');
 
 //register
-$routes->get('login/register/index', 'Register::index');
-$routes->get('register/proses', 'register::proses');
-$routes->get('register_page.php', 'register::index');
+$routes->get('register', 'Register::index');
+$routes->get('register/proses', 'Register::proses');
+$routes->get('register_page.php', 'Register::index');
+// register biasa
+$routes->post('register/auth', 'Register::regis_auth');
 // $routes->get('/trefle', 'plant::index');
 
-
 //login
-$routes->get('login/index', 'login::index');
-$routes->get('login/proses', 'login::proses');
-$routes->get('login_page.php', 'login::index');
+$routes->get('login', 'Login::index');
+$routes->get('login/proses', 'Login::proses');
+$routes->post('login/auth', 'Login::auth');
 
 
-$routes->get('login/logout', 'login::logout');
-$routes->get('register/logout', 'register::logout');
+$routes->get('login/logout', 'Login::logout');
+$routes->get('register/logout', 'Register::logout');
 
-
-$routes->get('user_page.php', 'user_page_controller::index');
+$routes->get('user_page.php', 'User_page_controller::index');

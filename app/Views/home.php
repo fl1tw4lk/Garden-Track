@@ -30,9 +30,6 @@
     display: block;
 }
 
-
-
-
 </style>
     <!-- Carousel Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -263,8 +260,5 @@
         </div>
     </div>
     <!-- Quote End -->
-
-
-   
 
 <?php echo $this->endSection()?>

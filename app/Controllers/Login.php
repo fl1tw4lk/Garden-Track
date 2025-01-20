@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Models\UsersModel;
 use Google_Client;
 
-class login extends BaseController
+class Login extends BaseController
 {
     protected $googleClient;
     protected $users;
@@ -21,8 +19,8 @@ class login extends BaseController
         $this->googleClient->addScope('email');
         $this->googleClient->addScope('profile');
     }
-    public function index()
-    {
+
+    public function index(){
         if (session()->get('access_token')) {
             $this->googleClient->revokeToken(session()->get('access_token'));
             session()->remove('access_token');
@@ -31,8 +29,8 @@ class login extends BaseController
         $data['link'] = $this->googleClient->createAuthUrl();
         return view('login_page', $data);
     }
-    public function proses()
-    {
+
+    public function proses(){
         $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getvar('code'));
         if (!isset($token['error'])) {
             $this->googleClient->setAccessToken($token['access_token']);
@@ -64,6 +62,46 @@ class login extends BaseController
         session()->destroy();
 
         // Redirect to home or login page
+        return redirect()->to('/');
+    }
+
+    public function auth(){
+        // Validasi input
+        $rules = [
+            'nama_users' => 'required',
+            'password' => 'required'
+        ];
+
+        if(!$this->validate($rules)){
+            session()->setFlashdata('errors',$this->validator->getErrors());
+            return view("login_page");
+        }
+
+        // Ambil inputan
+        $username = $this->request->getPost('nama_users');
+        $password = $this->request->getPost('password');
+
+        //cek username
+        $user = $this->users->get_user_username($username);
+
+        // Jika username tidak ditemukan
+        if (!$user) {
+            session()->setFlashdata('error', 'Username tidak ditemukan');
+            return redirect()->to('/login')->withInput();
+        }
+
+        // Verifikasi password
+        if (!password_verify($password, $user->password)) {
+            session()->setFlashdata('error', 'Password salah');
+            return redirect()->to('/login')->withInput();
+        }
+
+        // Set session
+        session()->set([
+            'id_user' => $user->id_user,
+            'nama_users' => $user->nama_users,
+            'logged_in' => true
+        ]);
         return redirect()->to('/');
     }
 }
