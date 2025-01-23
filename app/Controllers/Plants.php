@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 class Plants extends BaseController
 {
-    
+
 
     // api jek
     private $apiToken;

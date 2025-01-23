@@ -30,7 +30,8 @@ class Login extends BaseController
         return view('login_page', $data);
     }
 
-    public function proses(){
+    public function proses()
+    {
         $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getvar('code'));
         if (!isset($token['error'])) {
             $this->googleClient->setAccessToken($token['access_token']);
@@ -39,23 +40,32 @@ class Login extends BaseController
             $googleService = new \Google_Service_Oauth2($this->googleClient);
             $data = $googleService->userinfo->get();
         
+            // Simpan data ke dalam array sesi
             $row = [
-                'id_user' => $data['id'],
-                'nama_users' => $data['name'],
-                'email' => $data['email'],
-                'profile' => $data['picture'],
+                'id_user'     => $data['id'],
+                'nama_users'  => $data['name'],
+                'email'       => $data['email'],
+                'profile'     => $data['picture'],
+                'logged_in'   => true,
             ];
-            $this->users->save($row);
-        
             session()->set($row);
+
+            $userExists = $this->users->where('id_user', $data['id'])->first();
+            if (!$userExists) {
+                $this->users->save($row);
+            }
+        
             return view('user_page');
         }
+
+        return redirect()->to('/login')->with('error', 'Autentikasi gagal.');
     }
 
+
     public function logout(){
-        // Revoke the token if exists
-        if ($accessToken = session()->get('access_token')) {
-            $this->googleClient->revokeToken($accessToken);
+        if (session()->get('access_token')) {
+            $this->googleClient->revokeToken(session()->get('access_token'));
+            session()->remove('access_token');
         }
 
         // Destroy session
@@ -102,6 +112,6 @@ class Login extends BaseController
             'nama_users' => $user->nama_users,
             'logged_in' => true
         ]);
-        return redirect()->to('/');
+        return redirect()->to('user_page');
     }
 }
