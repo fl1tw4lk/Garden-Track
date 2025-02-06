@@ -422,21 +422,54 @@ public function ambildata()
     // Method untuk menampilkan detail tanaman
     public function detail($id_tanaman_kebun)
     {
+        $detailtanaman = $this->TanamanKebunModel->getTanamanDetailById($id_tanaman_kebun);
+        if (!$detailtanaman) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Tanaman dengan tidak ditemukan.");
+        }
+
+        // Ambil tanggal mulai dan tanggal selesai dari data tanaman
+        $tanggalMulai = strtotime($detailtanaman['tanggal_mulai']);
+        $tanggalSelesai = strtotime($detailtanaman['tanggal_selesai']);
+        $tanggalSekarang = time();  // Waktu sekarang
+
+        // Menghitung jumlah total hari (dari tanggal mulai ke tanggal selesai)
+        $jumlahHari = ($tanggalSelesai - $tanggalMulai) / (60 * 60 * 24);  // Hasil dalam hari
+
+        // Menghitung jumlah hari yang sudah berlalu dari tanggal mulai hingga hari ini
+        $hariYangBerjalan = ($tanggalSekarang - $tanggalMulai) / (60 * 60 * 24);
+
+        // Menghitung progress hari berdasarkan hari yang telah berlalu dibandingkan dengan jumlah total hari
+        if ($hariYangBerjalan < 0) {
+            // Jika hari yang berlalu kurang dari 0 (artinya belum dimulai), progress = 0
+            $progressHari = 0;
+        } elseif ($hariYangBerjalan > $jumlahHari) {
+            // Jika hari yang berlalu melebihi jumlah total hari (artinya sudah selesai), progress = 100
+            $progressHari = 100;
+        } else {
+            // Jika tanggal sekarang berada di antara tanggal mulai dan selesai, hitung progress
+            $progressHari = ($hariYangBerjalan / $jumlahHari) * 100;
+        }
+
+        if ($hariYangBerjalan < 0) {
+        // Jika hari yang berlalu kurang dari 0 (artinya belum dimulai), progress = 0
+        $progresBar = 0;
+        } elseif ($hariYangBerjalan > $jumlahHari) {
+            // Jika hari yang berlalu melebihi jumlah total hari (artinya sudah selesai), progress = 100
+            $progresBar = 100;
+        } else {
+            // Jika tanggal sekarang berada di antara tanggal mulai dan selesai, hitung progress
+            $progresBar = ($hariYangBerjalan / $jumlahHari) * 100;
+        }
+
+        // Menambahkan jumlah hari dan progress ke data
         $data = [
             'title' => 'Detail Tanaman',
-            'tanaman' => $this->TanamanKebunModel
-                    ->select('tanaman_kebun.*, tanaman.*,pengguna.id_user, pengguna.nama_users, pengguna.email, pengguna.profile')
-                    ->join('kebun', 'kebun.id_kebun = tanaman_kebun.id_kebun')
-                    ->join('tanaman', 'tanaman.id_tanaman = tanaman_kebun.id_tanaman') 
-                    ->join('pengguna', 'pengguna.id_user = kebun.id_user') 
-                    ->where('tanaman_kebun.id', $id_tanaman_kebun) 
-                    ->first(),
+            'tanaman' => $detailtanaman,
+            'jumlahHari' => round($jumlahHari),  // Pembulatan untuk jumlah hari
+            'progressHari' => round($progressHari),  // Pembulatan untuk progress berdasarkan jumlah hari
+            'progressBar' => round($progresBar),  // Pembulatan untuk progress bar
         ];
-        // Jika tanaman tidak ditemukan
-        if (!$data['tanaman']) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Tanaman tidak ditemukan");
-        }
-        // Tampilkan halaman detail tanaman
+        // dd($data);die;
         return view('tanaman/Detail_Tanaman', $data);
     }
     

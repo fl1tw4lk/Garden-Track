@@ -14,12 +14,21 @@ class komentarModel extends Model
     ];
 
     // Ambil semua komentar berdasarkan id_kebun
+    // public function getKomentarByKebun($id_kebun)
+    // {
+    //     return $this->where('id_kebun', $id_kebun)
+    //                 ->where('induk_komentar_id', null) // Hanya komentar utama
+    //                 ->orderBy('created_at', 'ASC')
+    //                 ->findAll();
+    // }
+
     public function getKomentarByKebun($id_kebun)
     {
-        return $this->where('id_kebun', $id_kebun)
-                    ->where('induk_komentar_id', null) // Hanya komentar utama
-                    ->orderBy('created_at', 'ASC')
-                    ->findAll();
+        return $this->select('komentar.*, pengguna.nama_users as nama_users')
+            ->join('pengguna', 'pengguna.id_user = komentar.id_user')
+            ->where('komentar.id_kebun', $id_kebun)
+            ->orderBy('komentar.created_at', 'DESC')
+            ->findAll();
     }
 
     // Ambil balasan komentar tertentu berdasarkan induk_komentar_id dan id_kebun

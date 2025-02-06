@@ -73,7 +73,7 @@ class Kebun extends BaseController
         return redirect()->to('/tanaman/tambah/' . $kebunId);
     }
 // --=========================================|| KELOLA KEBUN ||================================================--
-    public function index_kelola()
+    public function kebun()
     {
         if (!session()->get('logged_in')) {
             return redirect()->to('/login')->with('error', 'Silakan login terlebih dahulu.');
@@ -81,9 +81,25 @@ class Kebun extends BaseController
         $idUser = session()->get('id_user'); 
         $data = [
             'title' => 'Kebun Saya',
-            'kebun' => $this->kebunModel->where('id_user', $idUser)->findAll(),
+            'kebun' => $this->kebunModel->getKebunByUser($idUser)
         ] ;
-        return view('kebun/kelola_kebun', $data); 
+
+        return view('kebun/kebun', $data); 
+    }
+
+    public function kebunOrang($id_user)
+    {
+        $kebun = $this->kebunModel->getKebunByUser($id_user);
+
+        if (empty($kebun)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Tidak ada kebun ditemukan untuk pengguna ini.");
+        }
+
+        $data = [
+            'title' => 'Kebun',
+            'kebun' => $kebun,
+        ];
+        return view('kebun/kebun', $data);
     }
 
     public function detail($id)
@@ -91,20 +107,11 @@ class Kebun extends BaseController
         $kebun = $this->kebunModel->find($id);
         // Jika data kebun tidak ditemukan
         if (!$kebun) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Kebun dengan ID $id tidak ditemukan");
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Kebun dengan tidak ditemukan");
         }
         // Ambil daftar tanaman terkait dengan kebun ini
-        $tanaman = $this->tanamanKebunModel
-            ->select('tanaman_kebun.*, tanaman.common_name, tanaman.scientific_name, tanaman.image_url') 
-            ->join('tanaman', 'tanaman.id_tanaman = tanaman_kebun.id_tanaman') 
-            ->where('tanaman_kebun.id_kebun', $id) 
-            ->findAll();
-        $komentar = $this->komentarModel
-            ->select('komentar.*, pengguna.nama_users as nama_users')
-            ->join('pengguna', 'pengguna.id_user = komentar.id_user')
-            ->where('komentar.id_kebun', $id)
-            ->orderBy('komentar.created_at', 'DESC')
-            ->findAll();
+        $tanaman = $this->tanamanKebunModel->getTanamanByKebun($id);
+        $komentar = $this->komentarModel->getKomentarByKebun($id);
         $data = [
             'title' => 'Detail Kebun',
             'noFooter' => true,
@@ -113,7 +120,7 @@ class Kebun extends BaseController
             'komentar' => $komentar,
             'idUserLogin' => session()->get('id_user')
         ];
-
+        
         return view('kebun/tanaman', $data);
     }
 
@@ -160,6 +167,7 @@ class Kebun extends BaseController
         $data = [
             'nama_kebun' => $this->request->getPost('nama_kebun'),
         ];
+<<<<<<< HEAD
 
         $file = $this->request->getFile('poto_kebun');
 
@@ -167,12 +175,23 @@ class Kebun extends BaseController
             $newName = $file->getRandomName();
             $file->move(ROOTPATH . 'public/uploads/kebun', $newName); 
             $data['poto_kebun'] = $newName;
+=======
+        $file = $this->request->getFile('poto_kebun');
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $newName = $file->getRandomName(); 
+            $file->move(ROOTPATH . 'public/uploads/kebun/', $newName); 
+            $data['poto_kebun'] = $newName; 
+>>>>>>> 4e6735c3fdcd0b80e3e0afd8ed8cd5d0e89f73ae
 
-            // Debugging: Log nama file yang diunggah
             log_message('debug', 'File uploaded: ' . $newName);
 
+<<<<<<< HEAD
             // Hapus file lama jika ada
             if ($kebun['poto_kebun'] && file_exists(ROOTPATH . 'public/uploads/kebun/' . $kebun['poto_kebun'])) {
+=======
+            // Hapus file lama jika ada dan bukan default.png
+            if ($kebun['poto_kebun'] && $kebun['poto_kebun'] !== 'default.png' && file_exists(ROOTPATH . 'public/uploads/kebun/' . $kebun['poto_kebun'])) {
+>>>>>>> 4e6735c3fdcd0b80e3e0afd8ed8cd5d0e89f73ae
                 unlink(ROOTPATH . 'public/uploads/kebun/' . $kebun['poto_kebun']);
             }
         }
@@ -205,13 +224,7 @@ class Kebun extends BaseController
     }
 // --=========================================|| SEMUA KEBUN ||================================================--
     public function allkebun(){
-        $kebunData = $this->kebunModel
-        ->select('kebun.id_kebun, kebun.nama_kebun, kebun.poto_kebun, pengguna.nama_users, pengguna.email, pengguna.profile, tanaman.common_name, tanaman_kebun.tanggal_mulai, tanaman_kebun.tanggal_selesai')
-        ->join('pengguna', 'pengguna.id_user = kebun.id_user', 'left')
-        ->join('tanaman_kebun', 'tanaman_kebun.id_kebun = kebun.id_kebun', 'left')
-        ->join('tanaman', 'tanaman.id_tanaman = tanaman_kebun.id_tanaman', 'left')
-        ->orderBy('kebun.id_kebun', 'ASC')
-        ->findAll();
+        $kebunData = $this->kebunModel->getKebunData();
 
         // **Mengelompokkan data berdasarkan id_kebun**
         $kebunList = [];
@@ -224,6 +237,7 @@ class Kebun extends BaseController
                     'id_kebun' => $id_kebun,
                     'nama_kebun' => $item['nama_kebun'],
                     'poto_kebun' => $item['poto_kebun'],
+                    'id_user'=> $item['id_user'],
                     'nama_users' => $item['nama_users'],
                     'email' => $item['email'],
                     'profile' => $item['profile'],
@@ -281,8 +295,7 @@ class Kebun extends BaseController
             'title' => 'Kebun Saya',
             'kebun' => $kebunList
         ];
-        // dd($data);
-        // die;
+
         return view('kebun/allkebun', $data); 
     }
 

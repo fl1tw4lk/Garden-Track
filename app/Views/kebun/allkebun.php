@@ -169,15 +169,6 @@
       color: #6c757d;
   } */
 </style>
-<!-- Foto Profil -->
-<?php
-    $profilePath = $kebun['profile'] ?? 'defaut.jpg'; 
-  if (!empty($profilePath) && filter_var($profilePath, FILTER_VALIDATE_URL)) {
-      $profile = $profilePath; 
-  } else {
-      $profile = base_url('uploads/profile/' . ($profilePath ?: 'default.jpg')); 
-  }
-?>
 <!-- Breadcrumb -->
 <nav aria-label="breadcrumb" class="px-4 px-lg-5" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
     <ol class="breadcrumb">
@@ -199,6 +190,15 @@
     <div class="card-container">
       <?php if (isset($kebun) && !empty($kebun)): ?>
           <?php foreach ($kebun as $item):?>
+            <?php
+                // Foto Profile
+                $profilePath = $item['profile'] ?? 'default.png';
+                if (filter_var($profilePath, FILTER_VALIDATE_URL)) {
+                    $profile = $profilePath;
+                } else {
+                    $profile = base_url('uploads/profile/' . $profilePath);
+                }
+            ?>
           <div class="col-md-10">
             <div class="card">
               <div class="card-header">
@@ -211,8 +211,8 @@
                   <div class="col-md-4">
                     owner: 
                     <span class="chip member-chip">
-                      <a href="">
-                        <img alt="<?= esc($item['profile']); ?>" height="50" width="50" src="<?= esc($item['profile']); ?>">
+                      <a href="/kebun/kebun-<?= esc($item['id_user']); ?>">
+                        <img alt="<?= esc($item['nama_users']); ?>" height="50" width="50" src="<?= esc($profile); ?>">
                         <?= esc($item['nama_users']); ?>
                       </a>
                     </span>

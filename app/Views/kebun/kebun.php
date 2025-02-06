@@ -84,22 +84,25 @@
 <section class="hero-section" style="background-size: cover; background-position: center; padding-top: 40px;">
     <div class="container d-flex align-items-center justify-content-center">
         <div class="text-center">
-            <h1 class="catalog-text">Kelola Kebun</h1>
+            <h1 class="catalog-text">Kebun <?= $kebun[0]['nama_users']?></h1>
         </div>
     </div>
 </section>
-<!-- Tombol Tambah Kebun -->
-<div class="container mt-4 text-center">
-<a href="/buat_kebun" class="btn btn-success btn-lg rounded-pill shadow btn-hover-animate">
-    <i class="bi bi-plus-circle"></i> Tambah Kebun
-</a>
-</div>
+<?php if (session()->get('id_user') == $kebun[0]['id_user']): ?>
+  <!-- Tombol Tambah Kebun -->
+  <div class="container mt-4 text-center">
+  <a href="/buat_kebun" class="btn btn-success btn-lg rounded-pill shadow btn-hover-animate">
+      <i class="bi bi-plus-circle"></i> Tambah Kebun
+  </a>
+  </div>
+<?php endif; ?>
 <!-- Catalog Section -->
 <section class="catalog-section my-5">
   <div class="container">
     <div class="card-container">
       <?php if (isset($kebun) && !empty($kebun)): ?>
         <?php foreach ($kebun as $item): ?>
+          <!-- <php dd($kebun); die; ?>   -->
           <a href="/kebun/detail/<?= $item['id_kebun']; ?>" class="card">
           <img src="/uploads/kebun/<?= $item['poto_kebun'] ?>" class="card-img-top" alt="<?= $item['nama_kebun']; ?>">
             <div class="card-body">

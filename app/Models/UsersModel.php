@@ -59,5 +59,13 @@ class UsersModel extends Model{
         $result = $this->update($id, $data);
         return $result;
     }
-
+    
+    public function getUserByEmail($email, $id_user)
+    {
+        return $this->where('email', $email)
+                    ->where('deleted_at', NULL)
+                    ->where('id_user !=', $id_user)
+                    ->asArray()
+                    ->first();
+    }
 }

@@ -63,15 +63,15 @@ $routes->post('tanaman/update/(:num)', 'Tanaman::update/$1');
 //tambah kebun
 $routes->get('/buat_kebun', 'Kebun::index');
 $routes->post('/buat', 'Kebun::buat');
-$routes->get('/kebun/detail', 'Kebun::index_kelola');
+$routes->get('/kebun/detail', 'Kebun::kebun');
 
 //kelola kebun
-$routes->get('/kelola_kebun', 'Kebun::index_kelola');
+$routes->get('/kebun', 'Kebun::kebun');
+$routes->get('/kebun/kebun-(:any)', 'Kebun::kebunorang/$1');
 $routes->get('/kebun/detail/(:num)', 'Kebun::detail/$1');
 $routes->get('/kebun/edit/(:num)', 'Kebun::edit/$1');
 $routes->post('/kebun/update/(:num)', 'Kebun::update/$1');
 $routes->get('/kebun/delete/(:num)', 'Kebun::delete/$1');
-
 // Semua Kebun
 $routes->get('/kebun/semua-kebun', 'Kebun::allkebun');
 

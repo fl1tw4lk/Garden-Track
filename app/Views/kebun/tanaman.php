@@ -164,15 +164,6 @@
         flex-wrap: wrap;
     }
 </style>
-
-<?php
-    $image = $tanaman['image_url'] ?? 'default.png'; 
-    if (!empty($image) && filter_var($image, FILTER_VALIDATE_URL)) {
-        $poto = $image; 
-    } else {
-        $poto = base_url('uploads/' . ($image ?: 'default.png')); 
-    }
-?>
 <!-- Breadcrumb -->
 <nav aria-label="breadcrumb" class="px-4 px-lg-5" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
     <ol class="breadcrumb">
@@ -198,7 +189,29 @@
                 <section>
                     <h2>Tanaman Pada Kebun <?= $kebun['nama_kebun'] ?></h2>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <?php foreach ($tanaman as $item): ?>
+                        <?php foreach ($tanaman as $item) : 
+                            // Ambil image_url untuk setiap tanaman, atau set ke 'default.png' jika tidak ada
+                            $image = $item['image_url'] ?? 'default.png'; 
+
+                            // Mengecek apakah $image adalah URL yang valid
+                            if (!empty($image) && filter_var($image, FILTER_VALIDATE_URL)) {
+                                // Jika $image adalah URL yang valid, gunakan langsung URL tersebut
+                                $poto = $image; 
+                            } else {
+                                // Jika $image bukan URL atau kosong, cek apakah file tersebut ada di folder uploads
+                                $filePath = 'public/uploads/tanaman/' . $image;
+
+                                // Cek apakah file ada di server (upload folder)
+                                if (!empty($image) && file_exists($filePath)) {
+                                    // Jika file ada di folder uploads, gunakan path ke file tersebut
+                                    $poto = base_url('uploads/tanaman/' . $image);
+                                } else {
+                                    // Jika tidak ada file, gunakan gambar default
+                                    $poto = base_url('uploads/tanaman/default.png');
+                                }
+                            }
+                        ?>
+                        
                             <div class="col">
                                 <div class="card h-100">
                                     <a href="/tanaman/detail/<?= $item['id'] ?>" >

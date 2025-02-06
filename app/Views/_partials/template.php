@@ -8,7 +8,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?php echo base_url(''); ?>favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,18 +79,18 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img alt="" height="30" width="30" aria-hidden="true" src="<?= esc($profile) ?>">
                             <?php
-                            if (session()->has('nama_users')) {
-                                echo session('nama_users'); 
-                            } elseif (session()->has('email')) {
-                                echo session('email'); 
-                            } else {
-                                echo "Profile"; 
-                            }
+                                if (session()->has('nama_users')) {
+                                    echo session('nama_users'); 
+                                } elseif (session()->has('email')) {
+                                    echo session('email'); 
+                                } else {
+                                    echo "Profile"; 
+                                }
                             ?>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/Pengguna/editProfile/<?php echo $user; ?>">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="/kelola_kebun">Kebun Saya</a></li>
+                            <li><a class="dropdown-item" href="/kebun">Kebun Saya</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>

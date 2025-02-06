@@ -306,11 +306,7 @@ class Pengguna extends BaseController
         // Ambil data pengguna yang sedang diupdate
         $userLama = $this->users->find($id_user);
 
-        $existingUser = $this->users->where('email', $this->request->getPost('email'))
-                                    ->where('deleted_at', NULL)
-                                    ->where('id_user !=', $id_user)
-                                    ->asArray()
-                                    ->first();
+        $existingUser = $this->users->getUserByEmailExcludingSelf($this->request->getPost('email'), $id_user);
         
         if ($existingUser) {
             return redirect()->to('/Pengguna/editProfile/' . $id_user)
@@ -368,8 +364,7 @@ class Pengguna extends BaseController
 
         // Handle file upload
         $file = $this->request->getFile('profile');
-        // dd($userLama, $file);
-        // die;
+
         if ($file && $file->isValid() && !$file->hasMoved()) {
             $newName = $file->getRandomName();
             $file->move('uploads/profile', $newName);
