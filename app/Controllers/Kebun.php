@@ -161,21 +161,19 @@ class Kebun extends BaseController
             'nama_kebun' => $this->request->getPost('nama_kebun'),
         ];
 
-        // Ambil file dari request
         $file = $this->request->getFile('poto_kebun');
 
-        // Pastikan file ada, valid, dan belum dipindahkan
         if ($file && $file->isValid() && !$file->hasMoved()) {
-            $newName = $file->getRandomName(); 
-            $file->move(ROOTPATH . 'public/uploads', $newName); 
-            $data['poto_kebun'] = $newName; 
+            $newName = $file->getRandomName();
+            $file->move(ROOTPATH . 'public/uploads/kebun', $newName); 
+            $data['poto_kebun'] = $newName;
 
             // Debugging: Log nama file yang diunggah
             log_message('debug', 'File uploaded: ' . $newName);
 
             // Hapus file lama jika ada
-            if ($kebun['poto_kebun'] && file_exists(ROOTPATH . 'public/uploads/' . $kebun['poto_kebun'])) {
-                unlink(ROOTPATH . 'public/uploads/' . $kebun['poto_kebun']);
+            if ($kebun['poto_kebun'] && file_exists(ROOTPATH . 'public/uploads/kebun/' . $kebun['poto_kebun'])) {
+                unlink(ROOTPATH . 'public/uploads/kebun/' . $kebun['poto_kebun']);
             }
         }
 

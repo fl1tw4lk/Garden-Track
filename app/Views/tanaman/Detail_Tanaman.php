@@ -270,7 +270,7 @@
 
         <div class="info-card">
             <div class="info-card-title">Progress</div>
-            <div class="info-card-value"><?= esc($tanaman['progress'] ?? '0') ?>/100</div>
+            <div class="info-card-value"><?= esc($tanaman[''] ?? '0') ?>/100</div>
             <div class="info-card-subtext">days</div>
         </div>
 

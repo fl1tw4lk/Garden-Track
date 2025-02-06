@@ -241,7 +241,7 @@
         if (successMessage) {
             const Toast = Swal.mixin({
                 toast: true,
-                position: "top-end",  
+                position: "top",  
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
@@ -263,7 +263,7 @@
         if (errorMessage) {
             const Toast = Swal.mixin({
                 toast: true,
-                position: "top-end", 
+                position: "top", 
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,

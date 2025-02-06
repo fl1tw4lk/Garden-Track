@@ -101,7 +101,7 @@
       <?php if (isset($kebun) && !empty($kebun)): ?>
         <?php foreach ($kebun as $item): ?>
           <a href="/kebun/detail/<?= $item['id_kebun']; ?>" class="card">
-            <img src="/uploads/kebun/<?= $item['poto_kebun'] ?>" class="card-img-top" alt="<?= $item['nama_kebun']; ?>">
+          <img src="/uploads/kebun/<?= $item['poto_kebun'] ?>" class="card-img-top" alt="<?= $item['nama_kebun']; ?>">
             <div class="card-body">
               <h5 class="card-title">Nama Kebun : <?= htmlspecialchars($item['nama_kebun']); ?></h5>
             </div>

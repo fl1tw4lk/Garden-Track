@@ -24,20 +24,24 @@ class Pengguna extends BaseController
         $this->googleClient->setRedirectUri('http://localhost:8080/register/proses');
         $this->googleClient->addScope('email');
         $this->googleClient->addScope('profile');
+        $this->googleClient->setPrompt('select_account'); 
     }
 
 // --=========================================|| LOGIN ||================================================--
 
     // LOGIN GOOGLE
-    public function index_login(){
-        if (session()->get('access_token')) {
-            $this->googleClient->revokeToken(session()->get('access_token'));
-            session()->remove('access_token');
-        }
-        
-        $data['link'] = $this->googleClient->createAuthUrl();
-        return view('pengguna/login_page', $data, ['title' => 'Login']);
+    public function index_login()
+{
+    // Hapus token dari sesi untuk memastikan pengguna dapat memilih akun baru
+    if (session()->has('access_token')) {
+        $this->googleClient->revokeToken(session()->get('access_token'));
+        session()->remove('access_token');
     }
+    
+    $data['link'] = $this->googleClient->createAuthUrl();
+    return view('pengguna/login_page', $data, ['title' => 'Login']);
+}
+
 
     public function proses_login(){
         $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getvar('code'));
@@ -257,15 +261,16 @@ class Pengguna extends BaseController
     public function logout()
     {
         if (session()->get('access_token')) {
-            $this->googleClient->revokeToken(session()->get('access_token'));
-            session()->remove('access_token');
+            $this->googleClient->revokeToken(session()->get('access_token')); // Revoke token
+            session()->remove('access_token'); // Hapus access token dari sesi
         }
-        session()->setFlashdata('error', 'Anda Berhasil Logout..');
+    
+        // Hapus semua sesi pengguna
         session()->destroy();
-        // dd(session());
-        // die;
-        return redirect()->to('/');
+    
+        return redirect()->to('/')->with('message', 'Anda telah berhasil logout.');
     }
+    
 // --=========================================|| PANEL ||================================================--
     public function dashboard(): string
     {
