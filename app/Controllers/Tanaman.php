@@ -233,6 +233,128 @@ class Tanaman extends BaseController
     //         ]);
     //     }
     // }
+
+
+
+// public function ambildata(){
+//         $client = \Config\Services::curlrequest();
+
+//         // Ambil halaman saat ini dari parameter URL, default 1
+//         $currentPage = (int) $this->request->getGet('page') ?? 1;
+//         if ($currentPage < 1) {
+//             $currentPage = 1;
+//         }
+
+//         // API Endpoint untuk mengambil data tanaman sayuran
+//         $response = $client->get("{$this->baseUrl}/plants", [
+//             'query' => [
+//                 'filter[vegetable]' => 'true',
+//                 'token' => $this->apiToken,
+//                 'page' => $currentPage
+//             ]
+//         ]);
+
+//         if ($response->getStatusCode() === 200) {
+//             $data = json_decode($response->getBody(), true);
+
+//             if (!empty($data['data'])) {
+//                 foreach ($data['data'] as $plant) {
+//                     // Periksa apakah data sudah ada di database berdasarkan trefle_id
+//                     $existingPlant = $this->PlantModel->where('trefle_id', $plant['id'])->first();
+
+//                     if (!$existingPlant) {
+//                         // Simpan data ke database, termasuk URL gambar
+//                         dd($existingPlant);die;
+//                         $PlantModel->insert([
+//                             'trefle_id' => $plant['id'],
+//                             'common_name' => $plant['common_name'] ?? 'Unknown',
+//                             'scientific_name' => $plant['scientific_name'] ?? 'Unknown',
+//                             'family' => $plant['family'] ?? null,
+//                             'genus' => $plant['genus'] ?? null,
+//                             'image_url' => $plant['image_url'] ?? ($plant['images']['original']['url'] ?? null) // Pastikan path ini benar
+//                         ]);                        
+//                     }
+//                 }
+//             }
+            
+//             return view('plants', [
+//                 'plants' => $data['data'],
+//                 'currentPage' => $currentPage,
+//                 'totalPages' => $data['meta']['total_pages'] ?? 1
+//             ]);
+//         } else {
+//             // Log error atau tampilkan pesan error
+//             log_message('error', 'Gagal mengambil data dari Trefle API: ' . $response->getBody());
+//             return view('plants', [
+//                 'plants' => [],
+//                 'currentPage' => $currentPage,
+//                 'totalPages' => 1,
+//                 'error' => 'Gagal mengambil data dari Trefle API. Silakan coba lagi nanti.'
+//             ]);
+//         }
+//     }
+
+public function ambildata()
+{
+    $client = \Config\Services::curlrequest();
+
+    // Ambil halaman saat ini dari parameter URL, default 1
+    $currentPage = (int) ($this->request->getGet('page') ?? 1);
+    if ($currentPage < 1) {
+        $currentPage = 1;
+    }
+
+    // API Endpoint untuk mengambil data tanaman sayuran
+    $response = $client->get($this->baseUrl, [
+        'query' => [
+            'token' => $this->apiToken,
+            'page' => $currentPage
+        ]
+    ]);
+
+    // dd($response); die;
+    if ($response->getStatusCode() === 200) {
+        $data = json_decode($response->getBody(), true);
+
+        // dd($data); die;
+        if (!empty($data['data'])) {
+            foreach ($data['data'] as $plant) {
+                // Periksa apakah data sudah ada di database berdasarkan trefle_id
+                $existingPlant = $this->PlantModel->where('trefle_id', $plant['id'])->first();
+                if (!$existingPlant) {
+                    // Tentukan URL gambar dengan fallback jika tidak tersedia
+                    $imageUrl = $plant['image_url'] ?? ($plant['images']['original']['url'] ?? null);
+                    // Simpan data ke database
+                    $this->PlantModel->insert([
+                        'trefle_id' => $plant['id'],
+                        'common_name' => $plant['common_name'] ?? 'Unknown',
+                        'scientific_name' => $plant['scientific_name'] ?? 'Unknown',
+                        'family' => $plant['family'] ?? null,
+                        'genus' => $plant['genus'] ?? null,
+                        'image_url' => $imageUrl
+                    ]);
+                }
+            }
+        }
+
+        return view('/tanaman/plants', [
+            'plants' => $data['data'],
+            'currentPage' => $currentPage,
+            'totalPages' => $data['meta']['total_pages'] ?? 1
+        ]);
+    } else {
+        // Log error atau tampilkan pesan error
+        log_message('error', 'Gagal mengambil data dari Trefle API: ' . $response->getBody());
+        return view('/tanaman/plants', [
+            'plants' => [],
+            'currentPage' => $currentPage,
+            'totalPages' => 1,
+            'error' => 'Gagal mengambil data dari Trefle API. Silakan coba lagi nanti.'
+        ]);
+    }
+}
+
+
 // --=========================================|| TANAMAN-KEBUN ||================================================--
     public function formTambah($id_kebun)
     {

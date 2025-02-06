@@ -77,3 +77,7 @@ $routes->get('/kebun/semua-kebun', 'Kebun::allkebun');
 
 //komentar
 $routes->post('/kebun/komentar', 'Kebun::Komentar');
+
+
+//ambil data ke database
+$routes->get('/cek' , 'Tanaman::ambildata');
