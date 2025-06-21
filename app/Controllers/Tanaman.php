@@ -738,7 +738,7 @@ public function ambildata()
 
             //pindahkeun kadieu
             // $command = 'python3 ' . escapeshellarg($pythonFile) . ' ' . escapeshellarg($imagePath) . ' 2> ' . escapeshellarg(ROOTPATH . 'writable/logs/error.log');
-            $command = '/home/fl1tw4lk/miniconda3/envs/py310/bin/python3.10 ' . escapeshellarg($pythonFile) . ' ' . escapeshellarg($imagePath) . ' 2> ' . escapeshellarg(ROOTPATH . 'writable/logs/error.log');
+            $command = ' ' . escapeshellarg($pythonFile) . ' ' . escapeshellarg($imagePath) . ' 2> ' . escapeshellarg(ROOTPATH . 'writable/logs/error.log');
 
             $output = shell_exec($command);
             $log = file_get_contents(ROOTPATH . 'writable/logs/error.log');
